@@ -4,12 +4,7 @@ const shelterRoutes = require("./routes/shelter")
 const dogRoutes = require("./routes/dogs")
 const adminRoutes = require("./routes/admin")
 
-app.use((req, res, next) => {
-  if (req.query.isAdmin) { 
-    return next()
-  }
-  res.send("not admin")
-})
+
 
 // app.use("/",shelterRoutes) //* 第一引数のが自動で付けられる　このばあいだとrouteの時に
 app.use("/shelters", shelterRoutes)
