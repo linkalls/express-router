@@ -5,7 +5,7 @@ const dogRoutes = require("./routes/dogs")
 const adminRoutes = require("./routes/admin")
 
 app.use((req, res, next) => {
-  if (req.query.isAdmin) {
+  if (req.query.isAdmin) { 
     return next()
   }
   res.send("not admin")
